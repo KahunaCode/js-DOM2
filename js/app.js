@@ -102,8 +102,18 @@ hours5: Hours: We never close.
 Append the div elements to the div id "text5"
 */
 
+var divs = ["name5","rating5","price5","addy5","hours5"];
+var text = ["The Death Star Cafe","Rating: 2 Stars","Price: $$","Address: A galaxy far, far away.","Hours: We never close."]
+var toAdd = document.createDocumentFragment();
 
+for(var i = 0; i<divs.length; i++){
+	var newDiv = document.createElement("div");
+	newDiv.id = divs[i];
+	newDiv.innerHTML = text[i];
+	toAdd.appendChild(newDiv);
+}
 
+text5.appendChild(toAdd);
 
 
 
